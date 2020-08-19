@@ -9,4 +9,11 @@
         <property name="email" value="susu@qq.com"></property>
         <property name="gender" value="男" ></property>
     </bean>
+
+    <bean id="person3" class="com.jiajia.study.bean.Person">
+        <constructor-arg value="佳佳" />
+        <constructor-arg value="jiajia@qq.com"></constructor-arg>
+        <constructor-arg value="男"></constructor-arg>
+        <constructor-arg value="22"></constructor-arg>
+    </bean>
 </beans>

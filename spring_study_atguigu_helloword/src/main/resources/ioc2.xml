@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="person4" class="com.jiajia.study.bean.Person">
+
+    </bean>
+
+    <bean id="person4_2" class="com.jiajia.study.bean.Person">
+        <!-- 对 有默认值的复杂（引用类型）属性，设置为null-->
+        <property name="lastName">
+            <null></null>
+        </property>
+    </bean>
+
+</beans>

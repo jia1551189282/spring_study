@@ -1,6 +1,8 @@
 package com.jiajia.study.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @Author zjiajia
@@ -8,10 +10,20 @@ import lombok.Data;
  */
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
 
-    private String lastName;
+    private String lastName = "小虎";
     private String email;
     private String gender;
     private Integer age;
+
+  /*  private Car car;
+
+    private List<Book> books;
+
+    private Map<String,Object> map;
+
+    private Properties properties;*/
 }
