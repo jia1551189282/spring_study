@@ -15,4 +15,29 @@
         </property>
     </bean>
 
+    <!-- 为 bean 中的 javaBean 赋值 方式一    每次都会重新创建一个Car-->
+    <bean id="person4_3_1" class="com.jiajia.study.bean.Person">
+        <property name="car">
+            <bean class="com.jiajia.study.bean.Car">
+                <property name="carName" value="宝马"></property>
+                <property name="color" value="红色"></property>
+                <property name="price" value="88888"></property>
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="car" class="com.jiajia.study.bean.Car">
+        <property name="carName" value="保时捷"></property>
+        <property name="color" value="红色"></property>
+        <property name="price" value="77777777"></property>
+    </bean>
+    <!--为 bean 中的 javaBean 赋值 方式二  引用容器中已经存在bean -->
+    <bean id="person4_3_2" class="com.jiajia.study.bean.Person">
+        <property name="car" ref="car"></property>
+    </bean>
+
+
+
+
 </beans>

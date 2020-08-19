@@ -4,6 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+
 /**
  * @Author zjiajia
  * @Date 2020/8/18 20:50
@@ -19,11 +23,11 @@ public class Person {
     private String gender;
     private Integer age;
 
-  /*  private Car car;
+    private Car car;
 
     private List<Book> books;
 
     private Map<String,Object> map;
 
-    private Properties properties;*/
+    private Properties properties;
 }
