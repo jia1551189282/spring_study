@@ -37,6 +37,23 @@
         <property name="car" ref="car"></property>
     </bean>
 
+    <!--   配置的重用
+            如果加了  abstract  属性的话，那就表示这个实例只能用来继承，不能实例化
+            我们从ioc 容器拿这个实例会报错，
+            作用就是属性用来被继承，重用
+    -->
+    <bean id="person6_1" class="com.jiajia.study.bean.Person" abstract="true">
+        <property name="lastName" value="成成" ></property>
+        <property name="email" value="chengcheng@qq.com"></property>
+        <property name="age" value="22"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+
+    <!--  parent  属性  表示要 重用，但不是继承关系，只是把属性给继承过来了，类本身没有什么关系-->
+    <bean id="person6_2" class="com.jiajia.study.bean.Person" parent="person6_1">
+        <property name="age" value="23"></property>
+    </bean>
+
 
 
 

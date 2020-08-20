@@ -53,4 +53,13 @@ public class IOCTest2 {
         System.out.println(car == person_4_3_2.getCar());
 
     }
+
+    /**
+     * 测试 通过继承实现bean 配置的重用
+     */
+    @Test
+    public void test6(){
+        Person person6_2 =(Person) classPathXmlApplicationContext.getBean("person6_2");
+        System.out.println(person6_2);
+    }
 }
