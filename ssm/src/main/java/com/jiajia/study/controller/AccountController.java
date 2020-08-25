@@ -1,9 +1,13 @@
 package com.jiajia.study.controller;
 
+import com.jiajia.study.domain.Account;
 import com.jiajia.study.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * @author zjiajia
@@ -18,9 +22,10 @@ public class AccountController {
 
 
     @RequestMapping("/test")
-    public String controllerTest(){
-        accountService.findAll();
-        return "success";
+    @ResponseBody
+    public List<Account> controllerTest(){
+        List<Account> accountList = accountService.findAll();
+        return accountList;
     }
 
 
