@@ -18,4 +18,16 @@ public class SpringTest {
         Person bean = annotationConfigApplicationContext.getBean(Person.class);
         System.out.println(bean);
     }
+
+    /**
+     * 测试    compomentScan 注解的使用
+     */
+    @Test
+    public void testCompomentScan(){
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
+        String[] beanDefinitionNames = annotationConfigApplicationContext.getBeanDefinitionNames();
+        for (String beanName: beanDefinitionNames) {
+            System.out.println(beanName);
+        }
+    }
 }
