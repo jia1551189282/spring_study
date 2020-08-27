@@ -1,6 +1,7 @@
 package com.jiajia.study.test;
 
 import com.jiajia.study.config.MainConfig;
+import com.jiajia.study.config.MainConfig2;
 import com.jiajia.study.pojo.Person;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -29,5 +30,17 @@ public class SpringTest {
         for (String beanName: beanDefinitionNames) {
             System.out.println(beanName);
         }
+    }
+
+    /**
+     * 测试    scope
+     */
+    @Test
+    public void testScope(){
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
+        Object dog = annotationConfigApplicationContext.getBean("dog");
+        Object dog2 = annotationConfigApplicationContext.getBean("dog");
+        System.out.println(dog == dog2);
+        System.out.println(dog);
     }
 }
