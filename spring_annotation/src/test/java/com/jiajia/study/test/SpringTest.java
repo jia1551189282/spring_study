@@ -2,6 +2,7 @@ package com.jiajia.study.test;
 
 import com.jiajia.study.config.MainConfig;
 import com.jiajia.study.config.MainConfig2;
+import com.jiajia.study.config.MainConfig3;
 import com.jiajia.study.pojo.Person;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -42,5 +43,18 @@ public class SpringTest {
         Object dog2 = annotationConfigApplicationContext.getBean("dog");
         System.out.println(dog == dog2);
         System.out.println(dog);
+    }
+
+    /**
+     * 测试    conditional
+     */
+    @Test
+    public void testConditional(){
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfig3.class);
+        String[] beanDefinitionNames = annotationConfigApplicationContext.getBeanDefinitionNames();
+        for (String beanName: beanDefinitionNames
+             ) {
+            System.out.println(beanName);
+        }
     }
 }
