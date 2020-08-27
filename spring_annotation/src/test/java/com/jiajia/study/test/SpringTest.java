@@ -2,7 +2,7 @@ package com.jiajia.study.test;
 
 import com.jiajia.study.config.MainConfig;
 import com.jiajia.study.config.MainConfig2;
-import com.jiajia.study.config.MainConfig3;
+import com.jiajia.study.config.MainConfig4;
 import com.jiajia.study.pojo.Person;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -50,7 +50,7 @@ public class SpringTest {
      */
     @Test
     public void testConditional(){
-        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfig3.class);
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MainConfig4.class);
         String[] beanDefinitionNames = annotationConfigApplicationContext.getBeanDefinitionNames();
         for (String beanName: beanDefinitionNames
              ) {
